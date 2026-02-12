@@ -1,3 +1,9 @@
+body{
+    background-color: #585252;
+    color: #EFEEEC;
+    font-family: serif;
+}
+
 column {
     float: left;
     min-height: 100px;
@@ -18,7 +24,10 @@ column {
     /* border-bottom: 2px solid black; */
 }
 
-#college-search-input {
+#mentor-search-input {
+    background-color: #585252;
+    color: #EFEEEC;
+    font-family: serif;
     width: 80%;
     height: calc(100% - 5px);
     font-size: 1.2em;
@@ -27,13 +36,17 @@ column {
     border-bottom: 2px solid black; 
 }
 
-#left-col {
-    width: 25%;
-    position: fixed;
+.buttons{
+    background-color: #585252;
+    color: #EFEEEC;
+    font-family: serif;
+    height: 87%;
+    /* background-color: white; */
+    /* border:none; */
+    /* outline:none; */
+    border: 2px solid black;
 }
 
-#right-col {
-    width: 75%;
-    float: right;
-    padding-top: 0px;
+#mentor-info{
+    text-align: center;
 }

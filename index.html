@@ -6,17 +6,113 @@
     <title>CLEAR Wrapped</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script> -->
+    <!-- <script src="script.js"></script> -->
 </head>
 <body>
     <div class="interface-main">
         <h1>Welcome to CLEAR Wrapped!!!</h1>
         <div class="search-box">
-            <input type="text" id="college-search-input" placeholder="Enter your name">
+            <input type="text" id="mentor-search-input" placeholder="Enter your name"> <button type="button" class = "buttons" id="search-button">Enter</button>
         </div>
+    </div>
+
+    <div id="mentor-info">
+        <h2 id="mentor-name"></h2>
+        <button type="button" class = "buttons" id = "next-button">Next</button>
     </div>
     
 
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script>
 
-    
+        function findMentor(){
+            var $mentorName = $("#mentor-search-input").val();
+            $("#mentor-name").text("Hello " + $mentorName + "!");
+            const file = new File([],"dashboard.csv");
+            const reader = new FileReader();
+            var results;
+            reader.readAsText(file);
+            reader.onload = function(e) {
+                results = reader.result;
+                console.log(results);
+                // processData(results);
+            };
+        }
+        function processData(results){
+            var $mentorName = $("#mentor-search-input").val();
+            var dataAsArray = results.split("\n");
+            var datas = [];
+            var found = false;
+            for (let i = 0; i < dataAsArray.length; i++){
+                var row = dataAsArray[i].split(",");
+                console.log(row);
+                if (row[2] == $mentorName || row[3] == $mentorName){
+                    found = true;
+                    var course_name = row[0];
+                    var ohq = row[4];
+                    var course_size = Number(row[5]);     
+                    var helped = Number(row[6]);
+                    var avg = Number(row[8]);
+                    var average_helped = Math.round((helped/course_size)*100, 2);
+                    var most = Number(row[10]);
+                    datas = [course_name, ohq, helped, average_helped, most, avg];
+                    
+                }
+            }
+            if (!(found)){
+                $("#mentor-name").text("That's not a mentor from Fall 2025");
+            }
+            document.querySelector('#next-button').addEventListener('click', function (e) {
+                        sayHi(datas);
+            })
+        }
+        function sayHi(datas){
+            $("#mentor-name").text("You've had quite a semester as a ", datas[1], " for ", datas[0]);
+            document.querySelector('#next-button').addEventListener('click', function (e) {
+                       helped(datas.splice(0,2));
+            })
+        }
+        function helped(datas){
+            $("#mentor-name").text("You've helped", datas[0], "students this semester,");
+            document.querySelector('#next-button').addEventListener('click', function (e) {
+                        averageHelped(datas.splice(0,1));
+            })
+        }
+        function averageHelped(datas){
+            $("#mentor-name").text("that's", datas[0], "percent of the class!");
+            document.querySelector('#next-button').addEventListener('click', function (e) {
+                        mostHelped(datas.splice(0,1));
+            })
+        }
+        function mostHelped(datas){
+            $("#mentor-name").text("At your busiest session, you helped a whopping", datas[0], "students! That's quite a lot!");
+            document.querySelector('#next-button').addEventListener('click', function (e) {
+                        averageSize(datas.splice(0,1));
+            })
+        }
+        function averageSize(datas){
+            $("#mentor-name").text("Most weeks, you helped", datas[0], "students, wow!");
+            document.querySelector('#next-button').addEventListener('click', function (e) {
+                        gratitude();
+            })
+        }
+        function gratitude(){
+             $("#mentor-name").text("Just know, that we here at CLEAR HQ are really proud of you and super grateful! Keep up the hard work!!!");
+        }
+        document.querySelector('#mentor-search-input').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                findMentor();
+            }
+        });
+        
+        document.querySelector('#search-button').addEventListener('click', function (e) {
+            findMentor();
+        })
+
+        </script>
+
+
+
 </body>
 </html>
