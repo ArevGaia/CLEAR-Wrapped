@@ -50,7 +50,7 @@
             console.log(semesterDisplay);
             
             // Example: Fetch local CSV (place data.csv in the same folder as your HTML/JS file)
-            fetchCsvAndConvert('dashboard_' + semesterValue + '.csv').then(data => {
+            fetchCsvAndConvert('dashboards/dashboard_' + semesterValue + '.csv').then(data => {
                 processData(data, semesterDisplay);
             });
                    
