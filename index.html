@@ -37,6 +37,7 @@
         }
  
         function findMentor(){
+            clearData();
             var $mentorName = $("#mentor-search-input").val();
             // Example: Fetch local CSV (place data.csv in the same folder as your HTML/JS file)
             fetchCsvAndConvert('dashboard.csv').then(data => {
@@ -44,6 +45,16 @@
                 processData(data);
             });
                    
+        }
+        function clearData(){
+            $("#ohq").text("");
+            $("#sessions").text("")
+            $("#helped").text("")
+            $("#average").text("")
+            $("#most").text("");
+            $("#size").text("");
+            $("#gratitude").text("");
+
         }
         function processData(results){
             var $mentorName = $("#mentor-search-input").val();
@@ -55,7 +66,7 @@
             for (let i = 0; i < dataAsArray.length; i++){
                 var row = dataAsArray[i].split(",");
                 // console.log(row);
-                if (row[2] == $mentorName || row[3] == $mentorName){
+                if (row[2].toLowerCase() == $mentorName.toLowerCase() || row[3].toLowerCase() == $mentorName.toLowerCase()){
                     found = true;
                     var course_name = row[0];
                     var ohq = row[4];
