@@ -1,6 +1,6 @@
 body{
-    background-color: #585252;
-    color: #EFEEEC;
+    background-color: #cfe1b9;
+    color: #000000;
     font-family: serif;
 }
 
@@ -25,8 +25,8 @@ column {
 }
 
 #mentor-search-input {
-    background-color: #585252;
-    color: #EFEEEC;
+    background-color: #b5c99a;
+    color: #000000;
     font-family: serif;
     width: 80%;
     height: calc(100% - 5px);
@@ -37,8 +37,8 @@ column {
 }
 
 .buttons{
-    background-color: #585252;
-    color: #EFEEEC;
+    background-color: #b5c99a;
+    color: #000000;
     font-family: serif;
     height: 87%;
     /* background-color: white; */
