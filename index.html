@@ -12,7 +12,12 @@
         <h1>Welcome to CLEAR Wrapped!!!</h1>
         <h3>Up to date as of 12/18/2025</h3>
         <div class="search-box">
-            <input type="text" id="mentor-search-input" placeholder="Enter your name"> <button type="button" class = "buttons" id="search-button">Enter</button>
+            <input type="text" id="mentor-search-input" placeholder="Enter your name">
+            <select name="semester" id="semester">
+                <option value="f25">Fall 2025</option>
+                <option value="s26">Spring 2026</option>
+            </select>
+            <button type="button" class = "buttons" id="search-button">Enter</button>
         </div>
     </div>
 
@@ -39,10 +44,14 @@
         function findMentor(){
             clearData();
             var $mentorName = $("#mentor-search-input").val();
+            var semester = document.getElementById("semester");
+            var semesterValue = semester.value;
+            var semesterDisplay = semester.options[semester.selectedIndex].innerText;
+            console.log(semesterDisplay);
+            
             // Example: Fetch local CSV (place data.csv in the same folder as your HTML/JS file)
-            fetchCsvAndConvert('dashboard.csv').then(data => {
-                //console.log(data);
-                processData(data);
+            fetchCsvAndConvert('dashboard_' + semesterValue + '.csv').then(data => {
+                processData(data, semesterDisplay);
             });
                    
         }
@@ -56,12 +65,11 @@
             $("#gratitude").text("");
 
         }
-        function processData(results){
+        function processData(results, semester){
             var $mentorName = $("#mentor-search-input").val();
             console.log($mentorName);
             var dataAsArray = results.split("\n");
             var datas = [];
-            // document.getElementById('mentor-name').innerText = results;
             var found = false;
             for (let i = 0; i < dataAsArray.length; i++){
                 var row = dataAsArray[i].split(",");
@@ -80,7 +88,7 @@
                 }
                 }
             if (!(found)){
-                $("#mentor-name").text("That's not a mentor from Fall 2025");s
+                $("#mentor-name").text("That's not a mentor from " + semester);
             }
             else{
                 $("#mentor-name").text("Hello " + $mentorName + "!");
@@ -113,7 +121,6 @@
                 if (!response.ok) throw new Error('Network response was not ok');
                 
                 const csvContent = await response.text();
-                //console.log(csvContent);
                 return csvContent;
             } catch (error) {
                 console.error('Error fetching CSV:', error);
