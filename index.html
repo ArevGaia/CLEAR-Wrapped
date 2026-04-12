@@ -6,16 +6,21 @@
     <title>CLEAR Wrapped</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="images/marcus.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src = "script.js"></script>
+    
 </head>
 <body>
     <div class="interface-main">
         <h1>Welcome to CLEAR Wrapped!!!</h1>
-        <h3>Up to date as of 12/18/2025</h3>
+        <h3>Up to date as of 04/12/2026</h3>
         <div class="search-box">
-            <input type="text" id="mentor-search-input" placeholder="Enter your name">
+            <input type="text" id="mentor-search-input" placeholder="Mia Jones">
             <select name="semester" id="semester">
-                <option value="f25">Fall 2025</option>
                 <option value="s26">Spring 2026</option>
+                <option value="f25">Fall 2025</option>
             </select>
             <button type="button" class = "buttons" id="search-button">Enter</button>
         </div>
@@ -33,111 +38,8 @@
     </div>
     
 
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
-        <script>
-            // Reuse the `wait` function from 4.2
-        function wait(ms) {
-            return new Promise((resolve) => setTimeout(resolve, ms));
-        }
- 
-        function findMentor(){
-            clearData();
-            var $mentorName = $("#mentor-search-input").val();
-            var semester = document.getElementById("semester");
-            var semesterValue = semester.value;
-            var semesterDisplay = semester.options[semester.selectedIndex].innerText;
-            console.log(semesterDisplay);
-            
-            // Example: Fetch local CSV (place data.csv in the same folder as your HTML/JS file)
-            fetchCsvAndConvert('dashboards/dashboard_' + semesterValue + '.csv').then(data => {
-                processData(data, semesterDisplay);
-            });
-                   
-        }
-        function clearData(){
-            $("#ohq").text("");
-            $("#sessions").text("")
-            $("#helped").text("")
-            $("#average").text("")
-            $("#most").text("");
-            $("#size").text("");
-            $("#gratitude").text("");
 
-        }
-        function processData(results, semester){
-            var $mentorName = $("#mentor-search-input").val();
-            console.log($mentorName);
-            var dataAsArray = results.split("\n");
-            var datas = [];
-            var found = false;
-            for (let i = 0; i < dataAsArray.length; i++){
-                var row = dataAsArray[i].split(",");
-                // console.log(row);
-                if (row[1].toLowerCase() == $mentorName.toLowerCase() || row[2].toLowerCase() == $mentorName.toLowerCase()){
-                    found = true;
-                    var course_name = row[0];
-                    var ohq = row[3];
-                    var sessions = row[12];
-                    var course_size = Number(row[4]);     
-                    var helped = Number(row[5]);
-                    var avg = Number(row[7]);
-                    var average_helped = Math.round((helped/course_size)*100, 2);
-                    var most = Number(row[9]);
-                    datas = [course_name, ohq, sessions, helped, average_helped, most, avg];
-                }
-                }
-            if (!(found)){
-                $("#mentor-name").text("That's not a mentor from " + semester);
-            }
-            else{
-                $("#mentor-name").text("Hello " + $mentorName + "!");
-                displayData(datas);
-            }
-        
-    }
 
-        async function displayData(datas){
-            await wait(2000);
-            $("#ohq").text("You've had quite a semester as a "+ datas[1]+ " for " + datas[0]);
-            await wait(4000);
-            $("#sessions").text("Over the course of " + datas[2] + " sessions")
-            await wait(4000);
-            $("#helped").text("you helped "+ datas[3]+ " students this semester,")
-            await wait(4000);
-            $("#average").text("that's "+ datas[4]+ " percent of the class!")
-            await wait(4000);
-            $("#most").text("At your busiest session, you helped a whopping "+ datas[5]+ " students! That's quite a lot!");
-            await wait(4000);
-            $("#size").text("Most weeks, you helped "+ datas[6]+ " students, wow!");
-            await wait(4000);
-            $("#gratitude").text("Just know, that we here at CLEAR HQ are really proud of you and super grateful! Keep up the hard work!!!");
-
-        }
-
-        async function fetchCsvAndConvert(url) {
-            try {
-                const response = await fetch(url);
-                if (!response.ok) throw new Error('Network response was not ok');
-                
-                const csvContent = await response.text();
-                return csvContent;
-            } catch (error) {
-                console.error('Error fetching CSV:', error);
-            }
-            }
-
-        document.querySelector('#mentor-search-input').addEventListener('keypress', function (e) {
-            if (e.key === 'Enter') {
-                findMentor();
-            }
-        });
-        
-        document.querySelector('#search-button').addEventListener('click', function (e) {
-            findMentor();
-        })
-
-        </script>
 
 
 
