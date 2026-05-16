@@ -30,14 +30,11 @@ $( function() {
         }
         function processData(results, semester){
             var $mentorName = $("#mentor-search-input").val();
-            console.log("mentor: ", $mentorName);
             var dataAsArray = results.split("\n");
             var datas = [];
             var found = false;
-            console.log($mentorName)
             for (let i = 0; i < dataAsArray.length; i++){
                 var row = dataAsArray[i].split(",");
-                // console.log(row);
                 if (row[1].toLowerCase() == $mentorName.toLowerCase() || row[2].toLowerCase() == $mentorName.toLowerCase()){
                     found = true;
                     var course_name = row[0];
@@ -65,19 +62,19 @@ $( function() {
     }
 
         async function displayData(datas){
-            await wait(2000);
+            await wait(1000);
             $("#ohq").text("You've had quite a semester as a "+ datas[1]+ " for " + datas[0]);
-            await wait(4000);
+            await wait(2000);
             $("#sessions").text("Over the course of " + datas[2] + " sessions")
-            await wait(4000);
+            await wait(2000);
             $("#helped").text("you helped "+ datas[3]+ " students this semester,")
-            await wait(4000);
+            await wait(2000);
             $("#average").text("that's "+ datas[4]+ " percent of the class!")
-            await wait(4000);
+            await wait(2000);
             $("#most").text("At your busiest session, you helped a whopping "+ datas[5]+ " students! That's quite a lot!");
-            await wait(4000);
+            await wait(2000);
             $("#size").text("Most weeks, you helped "+ datas[6]+ " students, wow!");
-            await wait(4000);
+            await wait(2000);
             $("#gratitude").text("Just know, that we here at CLEAR HQ are really proud of you and super grateful! Keep up the hard work!!!");
 
         }

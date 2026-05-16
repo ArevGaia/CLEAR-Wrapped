@@ -1,43 +1,42 @@
-Course,Mentor 1,Mentor 2,Mentor Type,Course Size,Unique Attendees,≥1 Session,Avg. # Per Session,Smallest Session,Largest Session,Recent Session,Avg. % of Class Attending Sessions,# of Sessions,UNQ/# Course
-ASTR 100,Eleanor O'brien,Kate Herrmann,OWL,104,35,0.337,4.88,0,16,16,0.047,
-BIOL 100-01,Amelia Baird,Will Gordon,OWL,40,23,0.575,4.38,0,9,5,0.11,16,
-BIOL 100-02,Lucy Hall,Ellie Potts,OWL,39,12,0.308,1.67,0,5,1,0.043,18,
-BIOL 103,Lindsay Kaufman,Sophia Samra,OWL,22,9,0.409,1.87,0,4,1,0.085,15,
-BIOL 210,Clara Kendrick,,QUAIL,39,10,0.256,3.4,0,6,2,0.087,5,
-BIOL 223,Winifred Wood,Jenny Wei,QUAIL,40,9,0.225,2.08,0,4,2,0.052,13,
-CHEM 057,Sunnt Hunt,,HOOT,25,5,0.2,0.56,0,2,2,0.022,9,
-CHEM 101-01,Emmy Saarnio,Kylie Thompson,OWL,32,17,0.531,1.5,0,10,0,0.047,22,
-CHEM 101-02,Daniel Devapalan,Ananya Sivasubramaniam,OWL,33,18,0.545,2.92,0,8,4,0.088,13,
-CHEM 102-01,Taylor Satterfield,,OWL,21,19,0.905,5.33,1,11,5,0.254,15,
-CHEM 102-02,Owen Yeh-Lee,,HOOT,35,14,0.4,1.75,0,5,0,0.05,16,
-CHEM 102-03,Olivia Coyle,Sasha Chen,OWL,37,14,0.378,3.42,0,8,2,0.092,12,
-CHEM 205-01,Jack Glanz,,HOOT,15,6,0.4,1.57,0,4,1,0.105,14,
-CHEM 205-02,Emma Wei,,HOOT,32,10,0.313,1.64,0,8,2,0.051,14,
-CHEM 254,Anna Yeh,Erin Koh,OWL,52,19,0.365,3.67,1,10,9,0.071,15,
-CSCI 241,Natalie Frank,,HOOT,22,4,0.182,1.25,0,3,0,0.057,8,5.75
-CSCI 275,Luis Villa Roa,,HOOT,22,3,0.136,0.21,0,1,0,0.01,14,
-CSCI 280,Reed Wang,,HOOT,30,10,0.333,3.27,2,6,2,0.109,15,
-CSCI 383,Shane Beckwith,,HOOT,21,6,0.286,1.5,0,4,1,0.071,14,
-DATA 113-01,Michaela Juaire,,HOOT,38,15,0.395,3.27,0,8,8,0.086,11,
-DATA 113-02 & 03,Khoa Do,,HOOT,60,14,0.233,1.14,0,3,2,0.019,14,
-DATA 213,Emily Young,,HOOT,30,18,0.6,2.92,0,16,2,0.097,12,
-MATH 130,Hanna Kamperman,,QUAIL,8,3,0.375,0.45,0,2,2,0.056,11,
-MATH 133-01,Hyesoo Lee,,QUAIL,27,10,0.37,1.08,0,4,2,0.04,12,
-MATH 133-02,Kat Wright,,QUAIL,13,7,0.538,1.42,0,3,1,0.109,12,
-MATH 134-01,Adam Elbohy,,QUAIL,46,23,0.5,6,2,11,2,0.13,14,
-MATH 134-02,Merida Kuder-Wexler,,QUAIL,57,7,0.123,7,7,7,7,0.123,1,
-MATH 220-01,Tani Nevins-Klein,,HOOT,12,9,0.75,1.71,0,5,0,0.143,17,
-MATH 220-02,Maxwell L Novik,,HOOT,18,6,0.333,1.13,0,4,1,0.063,15,
-MATH 220-03,David Bronshvayg,,HOOT,23,14,0.609,4.4,1,7,7,0.191,15,
-MATH 231-01,Loren Cline,,HOOT,25,11,0.44,1.31,0,5,0,0.052,16,
-MATH 231-02,Melisa Punjani,,HOOT,31,14,0.452,1.8,0,6,0,0.058,15,
-MATH 232-01,Ryan Hoff,,HOOT,29,9,0.31,3.08,2,6,4,0.106,12,
-MATH 232-02,Rachel Lilley,,HOOT,31,22,0.71,7,1,14,12,0.226,15,
-MATH 301,Leah Burdette,Carlota Loran-Zopez,HOOT-Grader,23,22,0.957,10.07,6,16,6,0.438,14,
-MATH 318,JT Glasgow,Megan Kyi,HOOT-Grader,31,18,0.581,5.17,3,8,4,0.167,12,
-NSCI 201-01,Sarah Forslund,Simon Korotzer-Mariani,OWL,26,11,0.423,3.54,1,7,3,0.136,13,
-NSCI 201-02,Alicia Yuan,Maeve Choi,OWL,21,11,0.524,1.56,0,6,2,0.074,16,
-PHYS 104,Sozaburo Kajita,,HOOT,43,11,0.256,1.73,0,7,1,0.04,15,14
-PHYS 111,Mia Jones,Brooke Padgett,OWL,61,31,0.508,10.18,2,17,8,0.167,17,
-PHYS 310,Jamie Talmor,,HOOT,15,10,0.667,3.17,0,9,4,0.211,18,
-PHYS 311,Sherlock Zhao,,HOOT,9,4,0.444,1,0,3,1,0.111,12,
+Course,Mentor 1,Mentor 2,Mentor Type,Course Size,Unique Attendees,≥1 Session,Avg. # Per Session,Smallest Session,Largest Session,Recent Session,Avg. % of Class Attending Sessions,# of Sessions
+ASTR 100,Eleanor O'brien,Kate Herrmann,OWL,104,40,0.385,5.44,0,20,5,0.052,25
+BIOL 100-01,Amelia Baird,Will Gordon,OWL,40,27,0.675,4.5,0,9,3,0.113,24
+BIOL 100-02,Lucy Hall,Ellie Potts,OWL,39,17,0.436,1.65,0,5,0,0.042,26
+BIOL 103,Lindsay Kaufman,Sophia Samra,OWL,22,9,0.409,1.71,0,4,1,0.078,21
+BIOL 210,Clara Kendrick,,QUAIL,39,10,0.256,2.5,0,6,1,0.064,8
+BIOL 223,Winifred Wood,Jenny Wei,QUAIL,40,14,0.35,2.84,0,6,5,0.071,19
+CHEM 057,Sunny Hunt,,HOOT,25,7,0.28,0.73,0,3,0,0.029,11
+CHEM 101-01,Emmy Saarnio,Kylie Thompson,OWL,32,17,0.531,1.26,0,10,0,0.039,31
+CHEM 101-02,Daniel Devapalan,Ananya Sivasubramaniam,OWL,33,22,0.667,2.75,0,8,4,0.083,20
+CHEM 102-01,Taylor Satterfield,,OWL,21,19,0.905,5.86,1,13,13,0.279,21
+CHEM 102-02,Owen Yeh-Lee,,HOOT,35,17,0.486,1.83,0,8,0,0.052,23
+CHEM 102-03,Olivia Coyle,Sasha Chen,OWL,37,20,0.541,3.41,0,9,2,0.092,17
+CHEM 205-01,Jack Glanz,,HOOT,15,7,0.467,1.55,0,4,2,0.103,20
+CHEM 205-02,Emma Wei,,HOOT,32,12,0.375,1.75,0,8,2,0.055,16
+CHEM 254,Anna Yeh,Erin Koh,OWL,52,20,0.385,3.32,1,10,6,0.064,22
+CSCI 241,Natalie Frank,,HOOT,22,8,0.364,1.36,0,3,2,0.062,11
+CSCI 275,Luis Villa Roa,,HOOT,22,5,0.227,0.29,0,2,0,0.013,21
+CSCI 280,Reed Wang,,HOOT,30,12,0.4,3.22,2,7,5,0.107,23
+CSCI 383,Shane Beckwith,,HOOT,21,7,0.333,1.45,0,4,0,0.069,22
+DATA 113-01,Michaela Juaire,,HOOT,38,15,0.395,2.53,0,8,2,0.067,15
+DATA 113-02 & 03,Khoa Do,,HOOT,60,15,0.25,1.09,0,3,1,0.018,22
+DATA 213,Emily Young,,HOOT,30,25,0.833,4.37,0,17,5,0.146,19
+MATH 130,Hanna Kamperman,,QUAIL,8,3,0.375,0.44,0,2,0,0.055,18
+MATH 133-01,Hyesoo Lee,,QUAIL,27,10,0.37,0.7,0,4,0,0.026,20
+MATH 133-02,Kat Wright,,QUAIL,13,7,0.538,1.31,0,3,0,0.101,13
+MATH 134-01,Adam Elbohy,Merida Kuder-Wexler,QUAIL,46,26,0.565,5.85,2,11,9,0.127,20
+MATH 220-01,Tani Nevins-Klein,,HOOT,12,9,0.75,1.42,0,5,3,0.118,24
+MATH 220-02,Maxwell L Novik,,HOOT,18,8,0.444,1.43,0,4,3,0.079,21
+MATH 220-03,David Bronshvayg,,HOOT,23,15,0.652,3.82,0,7,2,0.166,22
+MATH 231-01,Loren Cline,,HOOT,25,12,0.48,1.13,0,5,1,0.045,23
+MATH 231-02,Melisa Punjani,,HOOT,31,14,0.452,1.33,0,6,0,0.043,21
+MATH 232-01,Ryan Hoff,,HOOT,29,9,0.31,2.61,0,6,0,0.09,18
+MATH 232-02,Rachel Lilley,,HOOT,31,23,0.742,6.64,0,14,7,0.214,22
+MATH 301,Leah Burdette,Carlota Loran-Lopez,HOOT-Grader,23,23,1,9.65,6,16,8,0.42,20
+MATH 318,JT Glasgow,Megan Kyi,HOOT-Grader,31,19,0.613,4.95,2,8,7,0.16,19
+NSCI 201-01,Sarah Forslund,Simon Korotzer-Mariani,OWL,26,13,0.5,3.5,1,8,4,0.135,20
+NSCI 201-02,Alicia Yuan,Maeve Choi,OWL,21,11,0.524,1.39,0,6,0,0.066,23
+PHYS 104,Sozaburo Kajita,,HOOT,43,12,0.279,1.64,0,7,4,0.038,22
+PHYS 111,Mia Jones,Brooke Padgett,OWL,61,32,0.525,9.28,2,17,13,0.152,25
+PHYS 310,Jamie Talmor,,HOOT,15,11,0.733,2.96,0,9,0,0.197,27
+PHYS 311,Sherlock Zhao,,HOOT,9,4,0.444,0.94,0,3,1,0.104,16
