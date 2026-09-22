@@ -54,3 +54,13 @@ column {
 #mentor-info{
     text-align: center;
 }
+
+
+.footer {
+   position: fixed;
+   bottom: 35px;
+   width: 100%;
+   height: 30px;
+   text-align: center;
+   font-size: 30px;
+}
